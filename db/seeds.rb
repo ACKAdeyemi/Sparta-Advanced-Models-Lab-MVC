@@ -8,8 +8,9 @@ end
 end
 
 3.times do
+  rand_author = rand(1..Author.all.length)
   rand_year = rand(1400..2018)
-  Book.create(title: Faker::Book.title, published_year: rand_year, genre: Faker::Book.genre)
+  Book.create(title: Faker::Book.title, published_year: rand_year, genre: Faker::Book.genre, author_id: rand_author)
 end
 
 3.times do
