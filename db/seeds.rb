@@ -14,9 +14,11 @@ end
 end
 
 3.times do
-  Chapter.create(title: Faker::LordOfTheRings.location)
+  rand_book = rand(1..Book.all.length)
+  Chapter.create(title: Faker::LordOfTheRings.location, book_id: rand_book)
 end
 
 3.times do
-  Paragraph.create(lorem: Faker::Lorem.paragraph)
+  rand_chapter = rand(1..Chapter.all.length)
+  Paragraph.create(lorem: Faker::Lorem.paragraph, chapter_id: rand_chapter)
 end
