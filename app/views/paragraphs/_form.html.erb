@@ -18,7 +18,7 @@
 
   <div class="field">
     <%= form.label :chapter_id %>
-    <%= collection_select(:paragraph, :chapter_id, Chapter.all, :id, :lorem) %>
+    <%= collection_select(:paragraph, :chapter_id, Chapter.all, :id, :title) %>
   </div>
 
   <div class="actions">
